@@ -15,4 +15,9 @@ public class HelloController {
 	public String api() {
 		return "api 호출";
 	}
+
+	@RequestMapping("/api/2")
+	public String apii() {
+		return "api 2에 대한 호출";
+	}
 }
