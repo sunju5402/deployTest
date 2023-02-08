@@ -1,5 +1,6 @@
 package com.example.seatchoice;
 
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -16,7 +17,7 @@ public class HelloController {
 		return "api 호출";
 	}
 
-	@RequestMapping("/api/2")
+	@GetMapping("/api/2")
 	public String apii() {
 		return "api 2에 대한 호출";
 	}
