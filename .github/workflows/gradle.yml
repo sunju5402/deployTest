@@ -96,12 +96,11 @@ jobs:
           sudo docker rmi ${{ secrets.DOCKER_USERNAME }}/${{ secrets.DOCKER_REPO }}
           sudo docker pull ${{ secrets.DOCKER_USERNAME }}/${{ secrets.DOCKER_REPO }}
           docker-compose up -d
-          docker image prune -f
-          
+          docker image prune -f     
           
   ## slack
   action-slack:
-    needs: CI-CD
+    needs: build
     runs-on: ubuntu-latest
     steps:
         - name: Slack Alarm
